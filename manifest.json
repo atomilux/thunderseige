@@ -8,6 +8,9 @@
       "type": "image/png"
     }
   ],
+  "engines": {
+    "npm": "2.1.x"
+  },
   "start_url": "./index.html",
   "display": "standalone",
   "theme_color": "#000000",
