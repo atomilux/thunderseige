@@ -4,7 +4,6 @@ import Spells from './Spells';
 
 export default class Player extends Component {
 
-
   constructor() {
     super();
 
@@ -44,11 +43,9 @@ export default class Player extends Component {
 
   //visibility toggler, css class switcher
   clickHandler(id) {
-
-    console.log(id + ":" + this.state.cont_stat_hidden);
-
     switch(id) {
-      case"statictics":
+      case"statistics":
+        console.log("switch:statistics");
         this.setState({
           cont_stat_hidden:false,
           cont_abilities_hidden:true,
@@ -59,6 +56,7 @@ export default class Player extends Component {
         })
       break;
       case"abilities":
+        console.log("switch:abilities");
         this.setState({
           cont_stat_hidden:true,
           cont_abilities_hidden:false,
@@ -69,6 +67,7 @@ export default class Player extends Component {
         })
       break;
       case"lore":
+        console.log("switch:lore");
         this.setState({
           cont_stat_hidden:true,
           cont_abilities_hidden:true,
@@ -81,7 +80,7 @@ export default class Player extends Component {
       default:
       break;
     }
-
+    
   }//end f
 
 
@@ -147,7 +146,7 @@ export default class Player extends Component {
           <Spells spellData={spellArr} hidden={this.state.cont_spells_hidden}/>
         </div>
         <div className="player_info player_lore" hidden={this.state.cont_lore_hidden}>
-          {lore.lore}
+          <p dangerouslySetInnerHTML={{ __html: lore.lore }} />
         </div>
 
       </div>

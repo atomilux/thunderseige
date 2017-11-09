@@ -79,11 +79,18 @@ a:hover {
   float:left;
 }
 
+@media screen and (max-width: 750px) {
+  #header ul {
+    width:60vw;
+  }
+}
+
 
 #header ul li {
-  font-size:2vw;
+  font-size:1.9vw;
   list-style-type: none;
 }
+
 
 .mainNavContainer {
   position:relative;
